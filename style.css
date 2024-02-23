@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #032561 0%, #bb00ff 100%);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body,
+button,
+input {
+  font-family: "DM Sans", sans-serif;
+}
+
+main {
+  background: #ffffff;
+  width: min(42.8rem, 90%);
+  height: min(42.4rem, fit-content);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 4.8rem 6.4rem;
+}
+
+main h1,
+main h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.7rem;
+  color: #34355b;
+}
+
+main .scrennOpen p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  color: #34355b;
+  padding-bottom: 1.7rem;
+}
+
+main img {
+  width: min(30rem, 100%);
+}
+
+main .scrennOpen img:hover {
+  animation: cookie 1s infinite;
+  cursor: pointer;
+}
+
+@keyframes cookie {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+main .scrennLuck .luck {
+  background: #e4edf1;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15rem);
+  opacity: 0;
+  animation: luck 1s forwards;
+}
+
+@keyframes luck {
+  0% {
+    transform: scale(0.5) translateY(15rem) ;
+    opacity: 0;
+  }
+ 
+  100% {
+    transform: scale(1)  translateY(0);
+    opacity: 1;
+  }
+}
+
+main .scrennLuck p {
+  font-family: "Dancing Script", cursive;
+  font-weight: normal;
+  font-size: 2.4rem;
+  color: #000;
+  opacity: 1;
+}
+
+main .scrennLuck button {
+  background-color: #ff9500;
+  color: white;
+  border: none;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+main .scrennLuck button:hover {
+  background: #dd8202;
+}
+
+.hide {
+  display: none;
+}
